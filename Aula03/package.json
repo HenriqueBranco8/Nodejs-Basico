@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-basico",
+  "version": "1.0.0",
+  "description": "Aprendendo nodejs para aplicações back-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HenriqueBranco8/Nodejs-Basico.git"
+  },
+  "keywords": [],
+  "author": "Henrique-Branco",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/HenriqueBranco8/Nodejs-Basico/issues"
+  },
+  "homepage": "https://github.com/HenriqueBranco8/Nodejs-Basico#readme"
+}
