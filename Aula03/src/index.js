@@ -15,28 +15,55 @@ const palyer2 = {
 }
 
 
-//Função what roll the dice
+//Object Running Track and give away track
+const getRandomBlock = () => {
+    let random = Math.random()
+    let result = ''
+    switch(true){
+        case random < 0.33:
+            result = 'Reta'
+            break
+        case random < 0.66:
+            result = 'Curva'
+            break
+        default:
+            result = 'Confronto'
+            break
+    }
+    return result
+}
 
-//Explicação: Por padrão o JavaScript é "Sincrono", que quer dizer que todas as ações vão ser executadas ao mesmo tempo, entretanto tem como inpedir isso. Para dizer ao JS/Node que uma função é asincrona, você tem que dizer para ele. Então, coloque "async" para mostrar que uma função deve ser executada depois da outra
+//function what roll the dice
 const rollDice = async () => {
     return Math.floor(Math.random() * 6) + 1
 }
 
+//function from the rounds 1 unitill 5
+const playRaceEnginer = async (personagem1, personagem2) => {
+   for(let round = 1; round <= 5; round++){
+        console.log(`🏁 Rodada ${round}`)
+
+        //give away track
+        let block = await getRandomBlock()
+        console.log(`Pista Sorteada: ${block}`)
+
+        //Result roll dice
+        let resultDice1 = await rollDice()
+        let resultDice2 = await rollDice()
+       
+
+        //Test habilits
+        let totalTesteSkill1 = 0
+        let totalTesteSkill2= 0
+        console.log('-----------------------------------------')
+        
+   }
+   
+}
+
 (async function main(){
-    console.log('')
+    console.log(`🏁🚦 Corrida entre ${palyer1.nome} e ${palyer2.nome} Começando...\n`)
+    await playRaceEnginer(palyer1, palyer2)
 })()
 
-
-/*Explicação: Existem dois jeitos de chamar uma função 'Main' para você chamar a função main você pode usar o método 1:
-    
-    async function main(){
-        console.log('hello')
-    }
-    main()
-
-método 2 (mais automático), aqui ela vai mostrar que ela é uma função auto declarável:
-
-    (async function main(){
-        console.log('hello')
-    })()
-*/
+//O que é uma await? uma await funciona de uma forma bem simples, ele chega e fala para o JS assim "Ei, JS, espera essa função acabar para continuar o código". O await faz uma pausa no código até que uma função "Async" devolva algo positivo ou negativo (aceito ou não aceito).
