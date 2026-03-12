@@ -1,5 +1,5 @@
 A pagina "SRC" é onde fica os códigos fontes.
-contém todos os arquivos essenciais para a construção da aplicação, como código-fonte, componentes, estilos, arquivos de configuração e recursos estáticos. Sua função principal é organizar e centralizar o código de forma estruturada, facilitando o desenvolvimento, a manutenção e a colaboração entre equipes.
+contém todos os arquivos essenciais para a construção da aplicação, como código-fonte, componentes, estilos e recursos estáticos. Sua função principal é organizar e centralizar o código de forma estruturada, facilitando o desenvolvimento, a manutenção e a colaboração entre equipes.
 Todos os arquivos de configuração ficam do lado de fora, igual ao package.json
 
 

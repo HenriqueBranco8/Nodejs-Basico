@@ -17,7 +17,7 @@ const palyer2 = {
 
 //Função what roll the dice
 
-//Explicação: Por padrão o JavaScript é "Sincrono", que quer dizer que todas as ações vão ser executadas ao mesmo tempo, entretanto tem como inpedir isso. Para dizer para o JS/Node que uma função é asincrona, você tem que dizer para ele. Então, coloque "async" para mostrar que uma função deve ser executada depois da outra
+//Explicação: Por padrão o JavaScript é "Sincrono", que quer dizer que todas as ações vão ser executadas ao mesmo tempo, entretanto tem como inpedir isso. Para dizer ao JS/Node que uma função é asincrona, você tem que dizer para ele. Então, coloque "async" para mostrar que uma função deve ser executada depois da outra
 const rollDice = async () => {
     return Math.floor(Math.random() * 6) + 1
 }
