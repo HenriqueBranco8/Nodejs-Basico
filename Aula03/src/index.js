@@ -33,6 +33,17 @@ const getRandomBlock = () => {
     return result
 }
 
+
+//function what Writes result rounds track
+const logRollResult = async (personagem, Block, diceResult, attribute) => {
+    console.log(`${personagem} 🎲 Roulou o dado de ${Block} ${diceResult} + ${attribute} = ${diceResult + attribute}`)
+    
+}
+
+const pointConquist = async (resultDice, attribute) => {
+    return resultDice + attribute
+}
+
 //function what roll the dice
 const rollDice = async () => {
     return Math.floor(Math.random() * 6) + 1
@@ -54,11 +65,54 @@ const playRaceEnginer = async (personagem1, personagem2) => {
 
         //Test habilits
         let totalTesteSkill1 = 0
-        let totalTesteSkill2= 0
-        console.log('-----------------------------------------')
+        let totalTesteSkill2 = 0
+
+
+        if(block === 'Reta'){
+            totalTesteSkill1 = resultDice1 + palyer1.velocidade
+            totalTesteSkill2 = resultDice2 + palyer2.velocidade
+
+            await logRollResult(palyer1.nome, 'Velocidade', resultDice1, palyer1.velocidade)
+            await logRollResult(palyer2.nome, 'Velocidade', resultDice2, palyer1.velocidade)
+            
+        }
+
+        if(block === 'Curva'){
+            totalTesteSkill1 = resultDice1 + palyer1.manobrabilidade
+            totalTesteSkill2 = resultDice2 + palyer2.manobrabilidade
+
+            await logRollResult(palyer1.nome, 'Manobrabilidade', resultDice1, palyer1.manobrabilidade)
+            await logRollResult(palyer2.nome, 'Manobrabilidade', resultDice2, palyer2.manobrabilidade)
+            
+        }
+
+        
+        if(block === 'Confronto'){
+            totalTesteSkill1 = resultDice1 + palyer1.poder
+            totalTesteSkill2 = resultDice2 + palyer2.poder
+
+            await logRollResult(palyer1.nome, 'power', resultDice1, palyer1.poder)
+            await logRollResult(palyer2.nome, 'power', resultDice2, palyer2.poder)
+
+        }
+        
+        if(totalTesteSkill1 > totalTesteSkill2){
+            console.log(`${palyer1.nome} marcou um ponto!`)
+            palyer1.pontos++
+        } else if(totalTesteSkill1 < totalTesteSkill2){
+            console.log(`${palyer2.nome} marcou um ponto!`)
+            palyer2.pontos++
+        }else if(totalTesteSkill1 === totalTesteSkill2){
+            console.log(`Rodada a foi acirrada mas deu EMPATE!!!`)
+        }
+        
+        
+
+        console.log('-----------------------------------------')  
+        
         
    }
-   
+        
 }
 
 (async function main(){
