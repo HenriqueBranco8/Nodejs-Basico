@@ -1,0 +1,13 @@
+{
+  "name": "aula05-esm-modules",
+  "version": "1.0.0",
+  "description": "Apredendo a fazer modules, exportar e importas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Henrique Branco",
+  "license": "MIT",
+  "type": "module"
+}
