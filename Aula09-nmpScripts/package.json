@@ -1,0 +1,16 @@
+{
+  "name": "aula09-nmpscripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "npm install",
+    "start:dev": "node ./src/index.js",
+    "start:watch": "node --watch ./src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module"
+}
