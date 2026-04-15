@@ -4,8 +4,8 @@
   "description": "kit de utilidades para e-commerces",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "start-watch": "node --watch src/index.js"
+    "start": "node --env-file=.env src/index.js",
+    "start-watch": "node --env-file=.env --watch src/index.js"
   },
   "keywords": [],
   "author": "HenriqueBranco",
