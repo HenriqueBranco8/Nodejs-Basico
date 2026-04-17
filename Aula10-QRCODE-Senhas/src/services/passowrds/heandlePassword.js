@@ -1,23 +1,14 @@
-const permitedCharactres = () => {
-    const permited = []
-
-    if(process.env.upperCaseLetters == true) permited.push(..."ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-    if(process.env.lowerCaseLetters == true) permited.push(..."abcdefghijklmnopqrstuvwxyz")
-    if(process.env.numbers == true) permited.push(..."0123456789")
-    if(process.env.specialCharacters == true) permited.push(..."/*.,-+!@#$%¨¨&*()-_=[}{]=;:?/°|")
-
-    return permited
-}
+import permitedCharactres from "./utils/permitedPassowrd.js"
 
 const handlePassowrd = async () => {
-    let characters = permitedCharactres()
+    let characters = await permitedCharactres()
     let passowrds = ''
 
-    const passowrdLength = process.env.passowrdLength
+    const passowrdLength = process.env.PASSOWRDLENGTH
 
     for(let i = 0; i < passowrdLength; i++){
-        const index = Math.floor(Math.random() * characters)
-        passowrds += index
+        const index = Math.floor(Math.random() * characters.length)
+        passowrds += characters[index]
     }
 
     console.log(passowrds)
