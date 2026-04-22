@@ -6,12 +6,12 @@
   "scripts": {
     "dist": "npx tsc",
     "start": "npm run dist && node ./dist/src/index.js",
-    "start-watch": "npm run dist && node --watch src/index.js"
+    "start-watch": "npm run dist && node --watch ./dist/src/index.js"
   },
   "keywords": [],
   "author": "HenriqueBranco8",
   "license": "MIT",
-  "type": "module",
+  "type": "commonjs",
   "devDependencies": {
     "typescript": "^6.0.3"
   }

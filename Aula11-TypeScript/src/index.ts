@@ -4,4 +4,4 @@ function main (){
     console.log(myEmail)
 }
 
-main()
+main() 
